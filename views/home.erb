@@ -1,0 +1,17 @@
+<form action="/" method="get">
+  <input type="text" name="createria" placeholder="what event?">
+  <input type="text" name="address" placeholder="Which Area?">
+  <input type="submit">
+</form>
+<div class="main-grid">
+<% for i in 0..14 do %>
+<div class="grid-container">
+  <img src="<%= @allFriendsPicture[i]%>">
+  <div>
+    <p><%= @allFriend[i] %></p>
+    <p><%= @allFriendsPhone[i] %></p>
+    <p><%= @allFriendsAddress[i] %></p>
+  </div>
+</div>
+<% end %>
+</div>
