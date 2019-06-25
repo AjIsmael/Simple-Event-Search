@@ -19,23 +19,9 @@ get "/" do
     image << event.dig(:logo,:original, :url)
   end
 
-  @allFriend = eventtitles
-  @allFriendsPhone =  describtion
-  @allFriendsAddress = start_date
-  @allFriendsPicture = image
+  @titles = eventtitles
+  @description=  describtion
+  @date = start_date
+  @image = image
   erb :home
-end
-
-get "/skills" do
-  erb :skills
-end
-get "private/main.js" do
-  @allFriend = allFriends
-  @allFriendsPhone = allFriendsPhone
-  @allFriendsAddress = allFriendsAddress
-  @allFriendsJob =allFriendsJob
-  @allFriendsPicture = allFriendsPicture
-end
-post "/results" do
-  "#{params[:id]} #{rand().to_s.to_a}"
 end

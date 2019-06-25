@@ -6,11 +6,11 @@
 <div class="main-grid">
 <% for i in 0..14 do %>
 <div class="grid-container">
-  <img src="<%= @allFriendsPicture[i]%>">
+  <img src="<%= @image[i]%>">
   <div>
-    <p><%= @allFriend[i] %></p>
-    <p><%= @allFriendsPhone[i] %></p>
-    <p><%= @allFriendsAddress[i] %></p>
+    <p><%= @titles[i] %></p>
+    <p><%= @description[i] %></p>
+    <p><%= @date[i] %></p>
   </div>
 </div>
 <% end %>
